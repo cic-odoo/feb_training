@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="art_work_form_view">
+            <field name="name">art.work.form.view</field>
+            <field name="model">art_gallery.art.work</field>
+            <field name="arch" type="xml">
+                <form string="Art Work Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        
+                        <group name="main_art_work">
+                            <group>
+                                <field name="description"/>
+                                <field name="finished_date"/>
+                            </group>
+                            <group>
+                                <field name="height"/>
+                                <field name="width"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

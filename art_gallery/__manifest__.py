@@ -24,6 +24,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'views/art_gallery_views.xml',
 
     ],
     # only loaded in demonstration mode
