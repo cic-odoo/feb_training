@@ -14,3 +14,7 @@ class ArtWork(models.Model):
     width = fields.Float(string='Width', required=True, default=1.0)
     
     finished_date = fields.Date(string='Finished Date', default=date.today())
+    
+    product_id = fields.Many2one(comodel_name='product.template', string='Product')
+    
+    
