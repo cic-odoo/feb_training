@@ -17,4 +17,25 @@ class ArtWork(models.Model):
     
     product_id = fields.Many2one(comodel_name='product.template', string='Product')
     
+    art_price = fields.Float(string='Art Price', compute='_compute_art_price', stored=True)
+    standard_price = fields.Float(related='product_id.standard_price', string='Standard Price')
+    
+    @api.depends('product_id', 'product_id.standard_price', 'height', 'width')
+    def _compute_art_price(self):
+        for art in self:
+            if art.standard_price > 0.0 and art.height > 1.0 and art.width > 1.0:
+                art.art_price = art.product_id.standard_price * art.height * art.width
+            else:
+                art.art_price = 100.0
+                
+        
+#     @api.model
+#     def test_function(self):
+         
+#         self.env['sale.order'].create({
+#             'partner_id': 2,
+#             'order_line': [(0, 0, {'product_id': 4})]
+#         })
+        
+                
     

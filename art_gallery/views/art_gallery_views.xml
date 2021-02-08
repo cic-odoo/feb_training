@@ -17,6 +17,8 @@
                             <group>
                                 <field name="height"/>
                                 <field name="width"/>
+                                <field name="product_id"/>
+                                <field name="art_price"/>
                             </group>
                         </group>
                     </sheet>
