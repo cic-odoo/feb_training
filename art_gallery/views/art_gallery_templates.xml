@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="art_gallery_web">
+        <t t-call="website.layout">
+            <div class="oe_structure">
+                <div class="container">
+                    <t t-set="title">Academy</t>
+                    <h1>TEST</h1>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

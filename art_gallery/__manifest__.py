@@ -19,13 +19,14 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale_management'],
+    'depends': ['sale_management','website'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/art_gallery_menu_items.xml',
         'views/art_gallery_views.xml',
+        'views/art_gallery_templates.xml',
 
     ],
     # only loaded in demonstration mode
